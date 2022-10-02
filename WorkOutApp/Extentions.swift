@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-// расширение для hex формата
+// расширение hex формата для цвета
 extension UIColor {
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
@@ -26,5 +26,19 @@ extension UIColor {
             (a, r, g, b) = (255, 0, 0, 0)
         }
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+    }
+}
+
+extension UIView {
+    //добавляю линию под навбаром
+    func addBottomBorder(with color: UIColor, with height: CGFloat) {
+        let seporator = UIView()
+        seporator.backgroundColor = color
+        seporator.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        seporator.frame = CGRect(x: 0,
+                                 y: frame.height - height,
+                                 width: frame.width,
+                                 height: height)
+        addSubview(seporator)
     }
 }
