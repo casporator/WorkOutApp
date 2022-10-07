@@ -30,7 +30,7 @@ extension UIColor {
 }
 
 extension UIView {
-    //добавляю линию под навбаром
+    //MARK: добавляю линию под навбаром
     func addBottomBorder(with color: UIColor, with height: CGFloat) {
         let seporator = UIView()
         seporator.backgroundColor = color
@@ -40,5 +40,49 @@ extension UIView {
                                  width: frame.width,
                                  height: height)
         addSubview(seporator)
+    }
+    
+//MARK: выношу AutoresizingMask, для того что бы постоянно не писать
+func toAutoLayout() {
+        translatesAutoresizingMaskIntoConstraints = false
+    }
+    func addSubviews(_ subviews: UIView...) {
+        subviews.forEach { addSubview($0) }
+    }
+
+//MARK: делаю моргание кастомной кнопки при нажатии
+func makeSystem(_ button: UIButton) {
+    button.addTarget(self, action: #selector(handleIn), for: [
+        .touchDown,
+        .touchDragInside
+    ])
+    
+    button.addTarget(self, action: #selector(handleOut), for: [
+        .touchDragOutside,
+        .touchUpInside,
+        .touchDragExit,
+        .touchCancel
+    ])
+ }
+
+    @objc func handleIn() {
+    UIView.animate(withDuration: 0.15) {self.alpha = 0.55}
+ }
+
+    @objc func handleOut() {
+    UIView.animate(withDuration: 0.15) {self.alpha = 1}
+ }
+}
+
+//MARK: убрать клавиатуру по тапу
+extension UIViewController {
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

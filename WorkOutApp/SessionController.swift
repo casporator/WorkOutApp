@@ -18,8 +18,8 @@ class SessionController: BaseController {
         //для того, что бы тайтл не переносился в название кнопки таббара:
         navigationController?.tabBarItem.title = Resourses.Strings.TabBar.session
         
-        addNavBarButton(at: .left, with: "Пауза")
-        addNavBarButton(at: .right, with: "Финиш")
+        addNavBarButton(at: .left, with: Resourses.Strings.NavBar.navBarLeftButton)
+        addNavBarButton(at: .right, with: Resourses.Strings.NavBar.navBarRightButton)
         
     }
 }

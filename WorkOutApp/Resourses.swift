@@ -16,6 +16,7 @@ enum Resourses {
         static var seporator = UIColor(hexString: "#E8ECEF")
         static var darkGray = UIColor(hexString: "#545C77")
         static var background = UIColor(hexString: "#F2F2F2")
+        static var secondary = UIColor(hexString: "#F0F3FF")
     }
     
     enum Strings {
@@ -25,14 +26,25 @@ enum Resourses {
             static var progress = "Прогресс"
             static var settings = "Настройки"
         }
+            enum NavBar {
+            static var navBarLeftButton = "Пауза"
+            static var navBarRightButton = "Финиш"
+        }
+        enum OverView {
+            static var allWorksoutButton = "All workouts"
+            
+      }
     }
-    
     enum Images {
         enum TabBar {
             static var overview = UIImage(named: "House Icon")
             static var session = UIImage(named:"Clock Icon")
             static var progress = UIImage(named:"Analytics Bars")
             static var settings = UIImage(named:"Gear Icon")
+        }
+        
+        enum Commons {
+            static var downArrow = UIImage(named: "Path")
         }
     }
     
@@ -41,5 +53,5 @@ enum Resourses {
             UIFont(name: "Helvetica", size: size) ?? UIFont()
         }
     }
-    
-}
+  }
+

@@ -20,6 +20,7 @@
 		BB6C985D28E9BDB300CF6333 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C985C28E9BDB300CF6333 /* SceneDelegate.swift */; };
 		BB6C986428E9BDB500CF6333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6C986328E9BDB500CF6333 /* Assets.xcassets */; };
 		BB6C986728E9BDB500CF6333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6C986528E9BDB500CF6333 /* LaunchScreen.storyboard */; };
+		BB859BCD28EF8AF4003731C5 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BCC28EF8AF4003731C5 /* SecondaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BB6C986328E9BDB500CF6333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB6C986628E9BDB500CF6333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB6C986828E9BDB500CF6333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB859BCC28EF8AF4003731C5 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +65,10 @@
 		BB47EA2728E9F3D600D530C3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BB47EA2E28E9FD6100D530C3 /* Settings */,
-				BB47EA2D28E9FD5900D530C3 /* Progress */,
-				BB47EA2C28E9FD5000D530C3 /* Sessions */,
-				BB47EA2B28E9FD4000D530C3 /* Overview */,
+				BB859BCB28EF8AAC003731C5 /* Session */,
+				BB859BCA28EF8A9B003731C5 /* Progress */,
+				BB859BC928EF8A8A003731C5 /* Settings */,
+				BB859BC728EF8A64003731C5 /* OverView */,
 				BB47EA2A28E9FD1500D530C3 /* Base */,
 			);
 			name = Controllers;
@@ -80,38 +82,6 @@
 				BB47EA2828E9F41E00D530C3 /* BaseController.swift */,
 			);
 			name = Base;
-			sourceTree = "<group>";
-		};
-		BB47EA2B28E9FD4000D530C3 /* Overview */ = {
-			isa = PBXGroup;
-			children = (
-				BB47EA3528EA528300D530C3 /* OverViewController.swift */,
-			);
-			name = Overview;
-			sourceTree = "<group>";
-		};
-		BB47EA2C28E9FD5000D530C3 /* Sessions */ = {
-			isa = PBXGroup;
-			children = (
-				BB47EA2F28E9FDA600D530C3 /* SessionController.swift */,
-			);
-			name = Sessions;
-			sourceTree = "<group>";
-		};
-		BB47EA2D28E9FD5900D530C3 /* Progress */ = {
-			isa = PBXGroup;
-			children = (
-				BB47EA3128E9FDC600D530C3 /* ProgressController.swift */,
-			);
-			name = Progress;
-			sourceTree = "<group>";
-		};
-		BB47EA2E28E9FD6100D530C3 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				BB47EA3328E9FDFA00D530C3 /* SettingsController.swift */,
-			);
-			name = Settings;
 			sourceTree = "<group>";
 		};
 		BB6C984E28E9BDB300CF6333 = {
@@ -150,6 +120,47 @@
 				BB6C985C28E9BDB300CF6333 /* SceneDelegate.swift */,
 			);
 			name = Application;
+			sourceTree = "<group>";
+		};
+		BB859BC728EF8A64003731C5 /* OverView */ = {
+			isa = PBXGroup;
+			children = (
+				BB47EA3528EA528300D530C3 /* OverViewController.swift */,
+				BB859BC828EF8A78003731C5 /* Views */,
+			);
+			name = OverView;
+			sourceTree = "<group>";
+		};
+		BB859BC828EF8A78003731C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB859BCC28EF8AF4003731C5 /* SecondaryButton.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BB859BC928EF8A8A003731C5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BB47EA3328E9FDFA00D530C3 /* SettingsController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		BB859BCA28EF8A9B003731C5 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				BB47EA3128E9FDC600D530C3 /* ProgressController.swift */,
+			);
+			name = Progress;
+			sourceTree = "<group>";
+		};
+		BB859BCB28EF8AAC003731C5 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				BB47EA2F28E9FDA600D530C3 /* SessionController.swift */,
+			);
+			name = Session;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB859BCD28EF8AF4003731C5 /* SecondaryButton.swift in Sources */,
 				BB47EA2228E9C96100D530C3 /* Extentions.swift in Sources */,
 				BB47EA1E28E9C7CF00D530C3 /* TabBarController.swift in Sources */,
 				BB47EA3028E9FDA600D530C3 /* SessionController.swift in Sources */,
