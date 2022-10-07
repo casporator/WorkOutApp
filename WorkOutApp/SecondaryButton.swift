@@ -33,8 +33,8 @@ final class SecondaryButton: UIButton {
 
 private extension SecondaryButton {
     func addViews() {
-        addSubview(lable)
-        addSubview(iconView)
+        addView(lable)
+        addView(iconView)
     }
     
     func layoutViews() {
@@ -57,12 +57,10 @@ private extension SecondaryButton {
         layer.cornerRadius = 14
         makeSystem(self)
         
-        lable.toAutoLayout()
         lable.textColor = Resourses.Colors.active
         lable.textAlignment = .center //располагаем по центру
         lable.font = Resourses.Fonts.helvelticaRegular(witht: 15)
         
-        iconView.toAutoLayout()
         iconView.image = Resourses.Images.Commons.downArrow?.withRenderingMode(.alwaysTemplate)
         iconView.tintColor = Resourses.Colors.active
     }

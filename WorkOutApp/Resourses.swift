@@ -17,6 +17,7 @@ enum Resourses {
         static var darkGray = UIColor(hexString: "#545C77")
         static var background = UIColor(hexString: "#F2F2F2")
         static var secondary = UIColor(hexString: "#F0F3FF")
+        
     }
     
     enum Strings {
@@ -31,7 +32,8 @@ enum Resourses {
             static var navBarRightButton = "Финиш"
         }
         enum OverView {
-            static var allWorksoutButton = "All workouts"
+            static var allWorksoutButton = "Все занятия"
+            static var titleWord = "Сегодня"
             
       }
     }
@@ -45,6 +47,7 @@ enum Resourses {
         
         enum Commons {
             static var downArrow = UIImage(named: "Path")
+            static var add = UIImage(named: "Add")
         }
     }
     

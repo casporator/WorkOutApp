@@ -43,6 +43,12 @@ extension UIView {
     }
     
 //MARK: выношу AutoresizingMask, для того что бы постоянно не писать
+    func addView(_ view: UIView) {
+        addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    
 func toAutoLayout() {
         translatesAutoresizingMaskIntoConstraints = false
     }
