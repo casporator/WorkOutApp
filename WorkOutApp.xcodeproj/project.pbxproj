@@ -23,6 +23,8 @@
 		BB859BCD28EF8AF4003731C5 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BCC28EF8AF4003731C5 /* SecondaryButton.swift */; };
 		BB859BD328F041E6003731C5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BD228F041E6003731C5 /* BaseView.swift */; };
 		BB859BD728F0F1AA003731C5 /* OverViewNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BD628F0F1AA003731C5 /* OverViewNavBar.swift */; };
+		BB859BDA28F224BC003731C5 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BD928F224BC003731C5 /* WeekView.swift */; };
+		BB859BDC28F22817003731C5 /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BDB28F22817003731C5 /* WeekDayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		BB859BCC28EF8AF4003731C5 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		BB859BD228F041E6003731C5 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		BB859BD628F0F1AA003731C5 /* OverViewNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewNavBar.swift; sourceTree = "<group>"; };
+		BB859BD928F224BC003731C5 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		BB859BDB28F22817003731C5 /* WeekDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		BB859BC828EF8A78003731C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BB859BD828F22363003731C5 /* WeekView */,
 				BB859BCC28EF8AF4003731C5 /* SecondaryButton.swift */,
 				BB859BD628F0F1AA003731C5 /* OverViewNavBar.swift */,
 			);
@@ -167,6 +172,15 @@
 				BB47EA2F28E9FDA600D530C3 /* SessionController.swift */,
 			);
 			name = Session;
+			sourceTree = "<group>";
+		};
+		BB859BD828F22363003731C5 /* WeekView */ = {
+			isa = PBXGroup;
+			children = (
+				BB859BD928F224BC003731C5 /* WeekView.swift */,
+				BB859BDB28F22817003731C5 /* WeekDayView.swift */,
+			);
+			name = WeekView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,11 +254,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB859BCD28EF8AF4003731C5 /* SecondaryButton.swift in Sources */,
+				BB859BDC28F22817003731C5 /* WeekDayView.swift in Sources */,
 				BB47EA2228E9C96100D530C3 /* Extentions.swift in Sources */,
 				BB47EA1E28E9C7CF00D530C3 /* TabBarController.swift in Sources */,
 				BB47EA3028E9FDA600D530C3 /* SessionController.swift in Sources */,
 				BB47EA2628E9EFA400D530C3 /* NavBarController.swift in Sources */,
 				BB47EA3628EA528300D530C3 /* OverViewController.swift in Sources */,
+				BB859BDA28F224BC003731C5 /* WeekView.swift in Sources */,
 				BB859BD728F0F1AA003731C5 /* OverViewNavBar.swift in Sources */,
 				BB47EA3428E9FDFA00D530C3 /* SettingsController.swift in Sources */,
 				BB47EA3228E9FDC600D530C3 /* ProgressController.swift in Sources */,
