@@ -10,10 +10,10 @@ import UIKit
 
 class SettingsController: BaseController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func setupViews() {
+        super.setupViews()
         
-        title = "Настройки"
+        title = Resourses.Strings.TabBar.settings
         
     }
 }

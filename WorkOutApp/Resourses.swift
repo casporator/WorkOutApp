@@ -34,8 +34,7 @@ enum Resourses {
         enum OverView {
             static var allWorksoutButton = "Все занятия"
             static var titleWord = "Сегодня"
-            
-      }
+        }
     }
     enum Images {
         enum TabBar {

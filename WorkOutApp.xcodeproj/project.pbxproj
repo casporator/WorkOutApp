@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB28D51F28F99FAB0049BB92 /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28D51E28F99FAB0049BB92 /* BaseInfoView.swift */; };
 		BB47EA1E28E9C7CF00D530C3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47EA1D28E9C7CF00D530C3 /* TabBarController.swift */; };
 		BB47EA2228E9C96100D530C3 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47EA2128E9C96100D530C3 /* Extentions.swift */; };
 		BB47EA2428E9CA9200D530C3 /* Resourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47EA2328E9CA9200D530C3 /* Resourses.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB28D51E28F99FAB0049BB92 /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
 		BB47EA1D28E9C7CF00D530C3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BB47EA2128E9C96100D530C3 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		BB47EA2328E9CA9200D530C3 /* Resourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resourses.swift; sourceTree = "<group>"; };
@@ -61,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB28D51D28F99F830049BB92 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB859BD228F041E6003731C5 /* BaseView.swift */,
+				BB28D51E28F99FAB0049BB92 /* BaseInfoView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		BB47EA1F28E9C93600D530C3 /* Others */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,10 +96,10 @@
 		BB47EA2A28E9FD1500D530C3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				BB28D51D28F99F830049BB92 /* Views */,
 				BB47EA1D28E9C7CF00D530C3 /* TabBarController.swift */,
 				BB47EA2528E9EFA400D530C3 /* NavBarController.swift */,
 				BB47EA2828E9F41E00D530C3 /* BaseController.swift */,
-				BB859BD228F041E6003731C5 /* BaseView.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -269,6 +280,7 @@
 				BB859BD328F041E6003731C5 /* BaseView.swift in Sources */,
 				BB47EA2928E9F41E00D530C3 /* BaseController.swift in Sources */,
 				BB6C985D28E9BDB300CF6333 /* SceneDelegate.swift in Sources */,
+				BB28D51F28F99FAB0049BB92 /* BaseInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,8 @@ import UIKit
 
 class ProgressController: BaseController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func setupViews() {
+        super.setupViews()
         
         title = "Прогресс тренеровок"
         //для того, что бы тайтл не переносился в название кнопки таббара:
