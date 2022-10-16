@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB28D51F28F99FAB0049BB92 /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28D51E28F99FAB0049BB92 /* BaseInfoView.swift */; };
+		BB28D51F28F99FAB0049BB92 /* WABaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28D51E28F99FAB0049BB92 /* WABaseInfoView.swift */; };
 		BB47EA1E28E9C7CF00D530C3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47EA1D28E9C7CF00D530C3 /* TabBarController.swift */; };
 		BB47EA2228E9C96100D530C3 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47EA2128E9C96100D530C3 /* Extentions.swift */; };
 		BB47EA2428E9CA9200D530C3 /* Resourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47EA2328E9CA9200D530C3 /* Resourses.swift */; };
@@ -21,7 +21,7 @@
 		BB6C985D28E9BDB300CF6333 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6C985C28E9BDB300CF6333 /* SceneDelegate.swift */; };
 		BB6C986428E9BDB500CF6333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6C986328E9BDB500CF6333 /* Assets.xcassets */; };
 		BB6C986728E9BDB500CF6333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6C986528E9BDB500CF6333 /* LaunchScreen.storyboard */; };
-		BB859BCD28EF8AF4003731C5 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BCC28EF8AF4003731C5 /* SecondaryButton.swift */; };
+		BB859BCD28EF8AF4003731C5 /* WAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BCC28EF8AF4003731C5 /* WAButton.swift */; };
 		BB859BD328F041E6003731C5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BD228F041E6003731C5 /* BaseView.swift */; };
 		BB859BD728F0F1AA003731C5 /* OverViewNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BD628F0F1AA003731C5 /* OverViewNavBar.swift */; };
 		BB859BDA28F224BC003731C5 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BD928F224BC003731C5 /* WeekView.swift */; };
@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB28D51E28F99FAB0049BB92 /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
+		BB28D51E28F99FAB0049BB92 /* WABaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseInfoView.swift; sourceTree = "<group>"; };
 		BB47EA1D28E9C7CF00D530C3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BB47EA2128E9C96100D530C3 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		BB47EA2328E9CA9200D530C3 /* Resourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resourses.swift; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		BB6C986328E9BDB500CF6333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB6C986628E9BDB500CF6333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB6C986828E9BDB500CF6333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB859BCC28EF8AF4003731C5 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		BB859BCC28EF8AF4003731C5 /* WAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAButton.swift; sourceTree = "<group>"; };
 		BB859BD228F041E6003731C5 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		BB859BD628F0F1AA003731C5 /* OverViewNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewNavBar.swift; sourceTree = "<group>"; };
 		BB859BD928F224BC003731C5 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				BB859BD228F041E6003731C5 /* BaseView.swift */,
-				BB28D51E28F99FAB0049BB92 /* BaseInfoView.swift */,
+				BB28D51E28F99FAB0049BB92 /* WABaseInfoView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -100,6 +100,7 @@
 				BB47EA1D28E9C7CF00D530C3 /* TabBarController.swift */,
 				BB47EA2528E9EFA400D530C3 /* NavBarController.swift */,
 				BB47EA2828E9F41E00D530C3 /* BaseController.swift */,
+				BB859BCC28EF8AF4003731C5 /* WAButton.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -155,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				BB859BD828F22363003731C5 /* WeekView */,
-				BB859BCC28EF8AF4003731C5 /* SecondaryButton.swift */,
 				BB859BD628F0F1AA003731C5 /* OverViewNavBar.swift */,
 			);
 			name = Views;
@@ -264,7 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB859BCD28EF8AF4003731C5 /* SecondaryButton.swift in Sources */,
+				BB859BCD28EF8AF4003731C5 /* WAButton.swift in Sources */,
 				BB859BDC28F22817003731C5 /* WeekDayView.swift in Sources */,
 				BB47EA2228E9C96100D530C3 /* Extentions.swift in Sources */,
 				BB47EA1E28E9C7CF00D530C3 /* TabBarController.swift in Sources */,
@@ -280,7 +280,7 @@
 				BB859BD328F041E6003731C5 /* BaseView.swift in Sources */,
 				BB47EA2928E9F41E00D530C3 /* BaseController.swift in Sources */,
 				BB6C985D28E9BDB300CF6333 /* SceneDelegate.swift in Sources */,
-				BB28D51F28F99FAB0049BB92 /* BaseInfoView.swift in Sources */,
+				BB28D51F28F99FAB0049BB92 /* WABaseInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

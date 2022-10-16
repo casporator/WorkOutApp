@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class BaseInfoView: BaseView {
+class WABaseInfoView: BaseView {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -18,6 +18,8 @@ class BaseInfoView: BaseView {
         
         return label
     }()
+    
+    private let button = WAButton(with: .primary)
     
     private let contentView: UIView = {
         let view = UIView()
@@ -30,11 +32,14 @@ class BaseInfoView: BaseView {
 }()
 
     //кастомный инит (устанавливаем label.text через инициализацию ):
-    init(with title: String? = nil, alignment: NSTextAlignment = .left) {
+    init(with title: String? = nil, buttonTitle: String? = nil) {
         //super.init(frame: .zero) - опускаем вниз, что бы в момент запуска сперва проверялось наличей тайтла и констрейтов
         
         titleLabel.text = title?.uppercased()
-        titleLabel.textAlignment = alignment
+        // если кнопки нет, то тайтл по центру. если есть то слева
+        titleLabel.textAlignment = buttonTitle == nil ? .center : .left
+        button.setTitle(buttonTitle)
+        button.isHidden = buttonTitle == nil ? true : false
         super.init(frame: .zero)
     }
     
@@ -42,13 +47,18 @@ class BaseInfoView: BaseView {
         super.init(frame: .zero)
 
   }
+    
+    func addButtonTarget (target: Any? , action: Selector) {
+        button.addTarget(target, action: action, for: .touchUpInside)
+    }
 }
 
-extension BaseInfoView {
+extension WABaseInfoView {
     override func setupViews() {
         super.setupViews()
         
         addView(titleLabel)
+        addView(button)
         addView(contentView)
         
     }
@@ -64,6 +74,12 @@ extension BaseInfoView {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            button.trailingAnchor.constraint(equalTo: trailingAnchor),
+            button.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+            button.widthAnchor.constraint(equalToConstant: 130),
+            button.heightAnchor.constraint(equalToConstant: 30),
+            
             
             contentView.topAnchor.constraint(equalTo: ContentTopAnchor, constant: ContentTopOfFset),
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),

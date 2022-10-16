@@ -10,9 +10,29 @@ import UIKit
 
 final class OverviewNavBar: BaseView {
    
-  private let titleLable = UILabel()
-  private let allWorkoutButton = SecondaryButton()
-  private let addButton = UIButton()
+    private let titleLable: UILabel = {
+        let label = UILabel()
+        label.text = Resourses.Strings.OverView.titleWord
+        label.textColor = Resourses.Colors.darkGray
+        label.font = Resourses.Fonts.helvelticaRegular(witht: 22)
+        
+        return label
+    }()
+    
+    private let allWorkoutButton: WAButton = {
+        let button = WAButton(with: .secondry)
+        button.setTitle(Resourses.Strings.OverView.allWorksoutButton)
+        return button
+    }()
+    
+    
+    private let addButton:  UIButton = {
+        let button = UIButton()
+        button.setImage(Resourses.Images.Commons.add, for: .normal)
+        
+        return button
+    }()
+    
   private let weekView = WeekView()
      
     
@@ -53,7 +73,6 @@ extension OverviewNavBar {
             allWorkoutButton.topAnchor.constraint(equalTo: addButton.topAnchor),
             allWorkoutButton.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -15),
             allWorkoutButton.heightAnchor.constraint(equalToConstant: 28),
-            allWorkoutButton.widthAnchor.constraint(equalToConstant: 130),
             
             titleLable.centerYAnchor.constraint(equalTo: addButton.centerYAnchor),
             titleLable.trailingAnchor.constraint(equalTo: allWorkoutButton.leadingAnchor),
@@ -73,12 +92,5 @@ extension OverviewNavBar {
         super.configureAppearence()
         backgroundColor = .white
        
-        titleLable.text = Resourses.Strings.OverView.titleWord
-        titleLable.textColor = Resourses.Colors.darkGray
-        titleLable.font = Resourses.Fonts.helvelticaRegular(witht: 22)
-        
-        allWorkoutButton.setTitle(Resourses.Strings.OverView.allWorksoutButton)
-      
-        addButton.setImage(Resourses.Images.Commons.add, for: .normal)
     }
 }
