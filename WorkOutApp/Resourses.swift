@@ -28,12 +28,18 @@ enum Resourses {
             static let settings = "Настройки"
         }
             enum NavBar {
-            static let navBarLeftButton = "Пауза"
-            static let navBarRightButton = "Финиш"
+            static let navBarStart = "Старт"
+            static let navBarPause = "Пауза"
+            static let navBarFinish = "Финиш"
         }
         enum OverView {
             static let allWorksoutButton = "Все занятия"
             static let titleWord = "Сегодня"
+        }
+        
+        enum Time {
+            static let elapsedTime = "Прошедшее время"
+            static let remainingTime = "Оставшееся время"
         }
     }
     enum Images {
