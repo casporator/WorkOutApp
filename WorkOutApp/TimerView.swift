@@ -28,7 +28,6 @@ final class TimerView: WABaseInfoView {
     
     private let elapsedTimeValueLable: UILabel = {
        let lable = UILabel()
-        lable.text = "02:15"
         lable.font = Resourses.Fonts.helvelticaRegular(witht: 46)
         lable.textColor = Resourses.Colors.darkGray
         lable.textAlignment = .center
@@ -48,7 +47,6 @@ final class TimerView: WABaseInfoView {
     
     private let  remainingTimeValueLable: UILabel = {
        let lable = UILabel()
-        lable.text = "12:45"
         lable.font = Resourses.Fonts.helvelticaRegular(witht: 13)
         lable.textColor = Resourses.Colors.darkGray
         lable.textAlignment = .center
@@ -65,9 +63,28 @@ final class TimerView: WABaseInfoView {
         return view
     }()
     
+    private let bottomStackView: UIStackView = {
+        let view = UIStackView()
+         view.axis = .horizontal
+         view.distribution = .fillProportionally
+         view.spacing = 25
+         
+         return view
+    }()
+    
+    private let completedPersentView = PersentView()
+    
+    private let remainingPersentView = PersentView()
+    
+    private let bottomSeporator: UIView = {
+      let seporator = UIView()
+        seporator.backgroundColor = Resourses.Colors.seporator
+        
+        return seporator
+    }()
     
     
-    private let progressView =  ProgressView()
+    private let progressView = ProgressView()
      
     private var timer = Timer()
     private var timerProgress: CGFloat = 0
@@ -81,7 +98,12 @@ final class TimerView: WABaseInfoView {
         let tempCurrentValue = progress > duration ? duration : progress
         let goalValueDevider = duration == 0 ? 1 : duration
         let percent = tempCurrentValue / goalValueDevider
+        let roundedPersent = Int(round(percent * 100))
         
+        elapsedTimeValueLable.text = getDisplayedString(from: Int(tempCurrentValue))
+        remainingTimeValueLable.text = getDisplayedString(from: Int(duration) - Int(tempCurrentValue))
+        completedPersentView.configure(title: "ЗАВЕРШЕНО", andValue: roundedPersent)
+        remainingPersentView.configure(title: "OСТАЛОСЬ", andValue: 100 - roundedPersent)
         progressView.drawProgress(with: CGFloat(percent))
     }
     
@@ -116,7 +138,7 @@ final class TimerView: WABaseInfoView {
                                      repeats: true,
                                      block: {[weak self] timer in
             guard let self = self else {return}
-            self.timerProgress -= 0.3
+            self.timerProgress -= self.timerDuration * 0.02
             if self.timerProgress <= 0 {
                 self.timerProgress = 0
                 timer.invalidate() //прерываем если таймер дошел до конца дюрейшина
@@ -127,10 +149,6 @@ final class TimerView: WABaseInfoView {
     }
 }
 
-
-
-
-
 extension TimerView {
     
     override func setupViews() {
@@ -138,6 +156,7 @@ extension TimerView {
         
         addView(progressView)
         addView(timeStackView)
+        addView(bottomStackView)
         
         [
             elapsedTimeLable,
@@ -145,10 +164,17 @@ extension TimerView {
             remainingTimeLable,
             remainingTimeValueLable
         ].forEach{
-        timeStackView.addArrangedSubview($0)
-      }
+            timeStackView.addArrangedSubview($0)
+            
+        [
+            completedPersentView,
+            bottomSeporator,
+            remainingPersentView,
+        ].forEach{
+            bottomStackView.addArrangedSubview($0)
     }
-    
+  }
+}
     override func constaintViews() {
         super.constaintViews()
         
@@ -161,14 +187,39 @@ extension TimerView {
             progressView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -40),
             
             timeStackView.centerYAnchor.constraint(equalTo: progressView.centerYAnchor),
-            timeStackView.centerXAnchor.constraint(equalTo: progressView.centerXAnchor)
+            timeStackView.centerXAnchor.constraint(equalTo: progressView.centerXAnchor),
+            
+            bottomStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -28),
+            bottomStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            bottomStackView.heightAnchor.constraint(equalToConstant: 35),
+            bottomStackView.widthAnchor.constraint(equalToConstant: 175),
+            
+            bottomSeporator.widthAnchor.constraint(equalToConstant: 1)
+            
         ])
     }
     
     override func configureAppearence() {
         super.configureAppearence()
         
-
+    }
+        }
+    
+private extension TimerView {
+    func getDisplayedString(from value: Int) -> String {
+        let seconds = value % 60
+        let minutes = (value / 60) % 60
+        let hours = value / 3600
+        
+        let secondString = seconds < 10 ? "0\(seconds)" : "\(seconds)"
+        let minutesString = minutes < 10 ? "0\(minutes)" : "\(minutes)"
+        let hoursString = hours < 10 ? "0\(hours)" : "\(hours)"
+        
+        return hours == 0
+        ? [minutesString, secondString].joined(separator: ":")
+        : [hoursString, minutesString, secondString].joined(separator: ":")
     }
     
-}
+  }
+
+

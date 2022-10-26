@@ -30,7 +30,7 @@ enum Resourses {
             enum NavBar {
             static let navBarStart = "Старт"
             static let navBarPause = "Пауза"
-            static let navBarFinish = "Финиш"
+            static let navBarFinish = "Сброс"
         }
         enum OverView {
             static let allWorksoutButton = "Все занятия"

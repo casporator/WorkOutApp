@@ -28,6 +28,7 @@
 		BB859BD728F0F1AA003731C5 /* OverViewNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BD628F0F1AA003731C5 /* OverViewNavBar.swift */; };
 		BB859BDA28F224BC003731C5 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BD928F224BC003731C5 /* WeekView.swift */; };
 		BB859BDC28F22817003731C5 /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB859BDB28F22817003731C5 /* WeekDayView.swift */; };
+		BBD3DD0E2909574F00EC8B8F /* PersentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3DD0D2909574F00EC8B8F /* PersentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		BB859BD628F0F1AA003731C5 /* OverViewNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewNavBar.swift; sourceTree = "<group>"; };
 		BB859BD928F224BC003731C5 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		BB859BDB28F22817003731C5 /* WeekDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
+		BBD3DD0D2909574F00EC8B8F /* PersentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				BB28D52628FC5D580049BB92 /* TimerView.swift */,
 				BB28D52928FC642F0049BB92 /* ProgressView.swift */,
+				BBD3DD0D2909574F00EC8B8F /* PersentView.swift */,
 			);
 			name = Timer;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				BB47EA3228E9FDC600D530C3 /* ProgressController.swift in Sources */,
 				BB6C985B28E9BDB300CF6333 /* AppDelegate.swift in Sources */,
 				BB47EA2428E9CA9200D530C3 /* Resourses.swift in Sources */,
+				BBD3DD0E2909574F00EC8B8F /* PersentView.swift in Sources */,
 				BB859BD328F041E6003731C5 /* BaseView.swift in Sources */,
 				BB47EA2928E9F41E00D530C3 /* BaseController.swift in Sources */,
 				BB28D52A28FC642F0049BB92 /* ProgressView.swift in Sources */,

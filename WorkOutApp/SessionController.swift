@@ -12,7 +12,7 @@ import UIKit
 class SessionController: BaseController {
     
     private let timerView = TimerView()
-    private let timerDuration = 10.0
+    private let timerDuration = 20.0
     
     override func navBarRightButtonHandler() {
         timerView.stopTimre()
@@ -59,7 +59,7 @@ extension SessionController {
         //для того, что бы тайтл не переносился в название кнопки таббара:
         navigationController?.tabBarItem.title = Resourses.Strings.TabBar.session
         
-        addNavBarButton(at: .left, with: Resourses.Strings.NavBar.navBarPause)
+        addNavBarButton(at: .left, with: Resourses.Strings.NavBar.navBarStart)
         addNavBarButton(at: .right, with: Resourses.Strings.NavBar.navBarFinish)
         
         timerView.configure(with: timerDuration, progress: 0.0)
