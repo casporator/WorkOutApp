@@ -19,7 +19,7 @@ class BaseView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
     }
 }
 
@@ -28,6 +28,9 @@ class BaseView: UIView {
     
     func constaintViews() {}
     
-    func configureAppearence() {}
-    
+    func configureAppearence() {
+        backgroundColor = .white
+        
+    }
+   
 }

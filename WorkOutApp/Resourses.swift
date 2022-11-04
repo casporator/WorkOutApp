@@ -41,6 +41,14 @@ enum Resourses {
             static let elapsedTime = "Прошедшее время"
             static let remainingTime = "Оставшееся время"
         }
+        
+        enum progressView{
+            static let workoutStats = "Статистика тренеровок"
+            static let averagePace = "Средний темп"
+            static let heartRate = "Сердечный ритм"
+            static let totalDistance = "Общее расстояние"
+            static let stepsCounter = "Счётчик шагов"
+        }
     }
     enum Images {
         enum TabBar {
@@ -53,6 +61,13 @@ enum Resourses {
         enum Commons {
             static let downArrow = UIImage(named: "Path")
             static let add = UIImage(named: "Add")
+        }
+        
+        enum Stats {
+            static let heart = UIImage(named: "Heart Beat Icon")
+            static let speed = UIImage(named: "Speed Icon")
+            static let maps = UIImage(named: "Maps Icon")
+            static let steps = UIImage(named: "Steps Icon")
         }
     }
     

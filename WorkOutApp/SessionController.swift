@@ -11,6 +11,10 @@ import UIKit
 
 class SessionController: BaseController {
     
+    private let statsView = StatsView(with: Resourses.Strings.progressView.workoutStats)
+    
+    private let stepsView = WABaseInfoView(with: Resourses.Strings.progressView.stepsCounter)
+    
     private let timerView = TimerView()
     private let timerDuration = 20.0
     
@@ -40,14 +44,26 @@ extension SessionController {
         super.setupViews()
         
         view.addView(timerView)
+        view.addView(statsView)
+        view.addView(stepsView)
     }
     
     override func constaintViews() {
         super.constaintViews()
         NSLayoutConstraint.activate([
-            timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  15),
+            timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             timerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
             timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+
+            statsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            statsView.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 10),
+            statsView.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -7.5),
+
+            stepsView.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 7.5),
+            stepsView.topAnchor.constraint(equalTo: statsView.topAnchor),
+            stepsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            stepsView.heightAnchor.constraint(equalTo: statsView.heightAnchor),
+            
         ])
     }
     
@@ -63,6 +79,16 @@ extension SessionController {
         addNavBarButton(at: .right, with: Resourses.Strings.NavBar.navBarFinish)
         
         timerView.configure(with: timerDuration, progress: 0.0)
+      /*
+        timerView.callBack = { [weak self] in
+            self?.navBarRightButtonHandler()
+        }
+     */
+        statsView.configure(with: [.heartRate(value: "155"),
+                                   .averagePace(value: "8'20''"),
+                                   .totalSteps(value: "7,682"),
+                                   .totalDistance(value: "8.25")
+                                   ])
     }
 }
  

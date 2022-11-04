@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 class WABaseInfoView: BaseView {
-
+    
+   
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = Resourses.Fonts.helvelticaRegular(witht: 13)
@@ -21,13 +22,16 @@ class WABaseInfoView: BaseView {
     
     private let button = WAButton(with: .primary)
     
-    private let contentView: UIView = {
+   let contentView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.borderColor = Resourses.Colors.seporator.cgColor
         view.layer.borderWidth = 1
         view.layer.cornerRadius = 5
-        
+        view.layer.shadowColor = Resourses.Colors.darkGray.cgColor
+        view.layer.shadowOffset = CGSize(width: 3, height: 3) //добавляем тень
+        view.layer.shadowRadius = 5
+        view.layer.shadowOpacity = 0.6
         return view
 }()
 
