@@ -46,7 +46,7 @@ final class StatsItemView: BaseView {
     }
     
     private let imageView = UIImageView()
-    
+     
     private let valueLable: UILabel = {
        let lable = UILabel()
         lable.font = Resourses.Fonts.helvelticaRegular(witht: 17)

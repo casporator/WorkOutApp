@@ -14,7 +14,7 @@ class WABaseInfoView: BaseView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = Resourses.Fonts.helvelticaRegular(witht: 13)
-        label.textColor = Resourses.Colors.inactive
+        label.textColor = Resourses.Colors.darkGray
         //label.text = "test".uppercased()
         
         return label

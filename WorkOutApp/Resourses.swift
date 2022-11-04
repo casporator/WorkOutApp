@@ -43,7 +43,7 @@ enum Resourses {
         }
         
         enum progressView{
-            static let workoutStats = "Статистика тренеровок"
+            static let workoutStats = "Статистика"
             static let averagePace = "Средний темп"
             static let heartRate = "Сердечный ритм"
             static let totalDistance = "Общее расстояние"
@@ -75,6 +75,10 @@ enum Resourses {
         static func helvelticaRegular(witht size: CGFloat) -> UIFont {
             UIFont(name: "Helvetica", size: size) ?? UIFont()
         }
+            static func boldSystemFont(with size: CGFloat) -> UIFont {
+                UIFont(name: "oldSystemFont", size: size) ?? UIFont()
+            }
+        }
     }
-  }
+  
 

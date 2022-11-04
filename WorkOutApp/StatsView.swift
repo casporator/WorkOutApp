@@ -7,14 +7,13 @@
 
 import Foundation
 import UIKit
-import UIKit
 
 final class StatsView: WABaseInfoView {
 
     private let stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        view.spacing = 15
+        view.spacing = 20
         return view
     }()
 

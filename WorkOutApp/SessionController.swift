@@ -11,9 +11,9 @@ import UIKit
 
 class SessionController: BaseController {
     
-    private let statsView = StatsView(with: Resourses.Strings.progressView.workoutStats)
+    private let statsView = StatsView(with: Resourses.Strings.progressView.workoutStats.uppercased())
     
-    private let stepsView = WABaseInfoView(with: Resourses.Strings.progressView.stepsCounter)
+    private let stepsView = StepsView(with: Resourses.Strings.progressView.stepsCounter.uppercased())
     
     private let timerView = TimerView()
     private let timerDuration = 20.0
@@ -89,7 +89,14 @@ extension SessionController {
                                    .totalSteps(value: "7,682"),
                                    .totalDistance(value: "8.25")
                                    ])
+        
+        stepsView.configure(with: [.init(value: "8k", heightMultiplire: 1.0, title: "2/13"),
+                                   .init(value: "7k", heightMultiplire: 0.8, title: "2/14"),
+                                   .init(value: "5k", heightMultiplire: 0.5, title: "2/15"),
+                                   .init(value: "6k", heightMultiplire: 0.7, title: "2/16"),
+                                  ])
     }
 }
  
 
+                          

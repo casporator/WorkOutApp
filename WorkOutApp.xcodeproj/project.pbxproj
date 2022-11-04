@@ -12,6 +12,9 @@
 		BB28D52A28FC642F0049BB92 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28D52928FC642F0049BB92 /* ProgressView.swift */; };
 		BB2A9145291550EC00AFB323 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A9144291550EC00AFB323 /* StatsView.swift */; };
 		BB2A91482915531300AFB323 /* StatsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A91472915531300AFB323 /* StatsItemView.swift */; };
+		BB2A914A2915A25400AFB323 /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A91492915A25400AFB323 /* StepsView.swift */; };
+		BB2A914C2915A72A00AFB323 /* WABarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A914B2915A72A00AFB323 /* WABarsView.swift */; };
+		BB2A914F2915A79F00AFB323 /* WABarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A914E2915A79F00AFB323 /* WABarView.swift */; };
 		BB47EA1E28E9C7CF00D530C3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47EA1D28E9C7CF00D530C3 /* TabBarController.swift */; };
 		BB47EA2228E9C96100D530C3 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47EA2128E9C96100D530C3 /* Extentions.swift */; };
 		BB47EA2428E9CA9200D530C3 /* Resourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47EA2328E9CA9200D530C3 /* Resourses.swift */; };
@@ -39,6 +42,9 @@
 		BB28D52928FC642F0049BB92 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		BB2A9144291550EC00AFB323 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		BB2A91472915531300AFB323 /* StatsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsItemView.swift; sourceTree = "<group>"; };
+		BB2A91492915A25400AFB323 /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
+		BB2A914B2915A72A00AFB323 /* WABarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABarsView.swift; sourceTree = "<group>"; };
+		BB2A914E2915A79F00AFB323 /* WABarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABarView.swift; sourceTree = "<group>"; };
 		BB47EA1D28E9C7CF00D530C3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BB47EA2128E9C96100D530C3 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		BB47EA2328E9CA9200D530C3 /* Resourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resourses.swift; sourceTree = "<group>"; };
@@ -76,8 +82,9 @@
 		BB28D51D28F99F830049BB92 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BB859BD228F041E6003731C5 /* BaseView.swift */,
 				BB28D51E28F99FAB0049BB92 /* WABaseInfoView.swift */,
+				BB859BD228F041E6003731C5 /* BaseView.swift */,
+				BB2A914D2915A76D00AFB323 /* WABarsView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -114,6 +121,7 @@
 		BB2A9143291545A100AFB323 /* Steps */ = {
 			isa = PBXGroup;
 			children = (
+				BB2A91492915A25400AFB323 /* StepsView.swift */,
 			);
 			name = Steps;
 			sourceTree = "<group>";
@@ -124,6 +132,15 @@
 				BB2A91472915531300AFB323 /* StatsItemView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		BB2A914D2915A76D00AFB323 /* WABarsView */ = {
+			isa = PBXGroup;
+			children = (
+				BB2A914B2915A72A00AFB323 /* WABarsView.swift */,
+				BB2A914E2915A79F00AFB323 /* WABarView.swift */,
+			);
+			name = WABarsView;
 			sourceTree = "<group>";
 		};
 		BB47EA1F28E9C93600D530C3 /* Others */ = {
@@ -325,11 +342,14 @@
 				BB47EA2228E9C96100D530C3 /* Extentions.swift in Sources */,
 				BB47EA1E28E9C7CF00D530C3 /* TabBarController.swift in Sources */,
 				BB2A9145291550EC00AFB323 /* StatsView.swift in Sources */,
+				BB2A914C2915A72A00AFB323 /* WABarsView.swift in Sources */,
 				BB47EA3028E9FDA600D530C3 /* SessionController.swift in Sources */,
 				BB47EA2628E9EFA400D530C3 /* NavBarController.swift in Sources */,
+				BB2A914F2915A79F00AFB323 /* WABarView.swift in Sources */,
 				BB47EA3628EA528300D530C3 /* OverViewController.swift in Sources */,
 				BB2A91482915531300AFB323 /* StatsItemView.swift in Sources */,
 				BB859BDA28F224BC003731C5 /* WeekView.swift in Sources */,
+				BB2A914A2915A25400AFB323 /* StepsView.swift in Sources */,
 				BB859BD728F0F1AA003731C5 /* OverViewNavBar.swift in Sources */,
 				BB47EA3428E9FDFA00D530C3 /* SettingsController.swift in Sources */,
 				BB47EA3228E9FDC600D530C3 /* ProgressController.swift in Sources */,
